@@ -1,4 +1,4 @@
-# Consultor de IPCA para Imóveis — RAG com LLM local
+# Consultor de IPCA — RAG com LLM local
 
 Chatbot que responde perguntas sobre o IPCA usando **apenas fontes oficiais brasileiras**,
 com busca vetorial (RAG) e um modelo de linguagem rodando **na própria máquina**.

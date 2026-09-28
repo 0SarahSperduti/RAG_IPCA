@@ -196,9 +196,9 @@ def responder(modelo: str, pergunta: str, contexto: str) -> str:
 # ==============================================================================
 # INTERFACE
 # ==============================================================================
-st.set_page_config(page_title="Consultor de IPCA — Imóveis", layout="centered", page_icon="🏠")
+st.set_page_config(page_title="Consultor de IPCA ", layout="centered", page_icon="")
 
-st.title("🏠 Consultor de IPCA para Imóveis")
+st.title("Consultor de IPCA para Imóveis")
 st.caption(
     f"Consulta de {date.today().strftime('%d/%m/%Y')} · RAG com LLM local · "
     "IBGE (SIDRA + portal), FGV IBRE e Focus/Banco Central"
@@ -214,7 +214,7 @@ except Exception as exc:
 combinada = fontes.serie_combinada(serie, projecoes)
 
 # ------------------------------------------------------------------ calculadora
-st.sidebar.header("🧮 Calculadora de reajuste")
+st.sidebar.header("Calculadora de reajuste")
 st.sidebar.caption("Aplica o IPCA acumulado do período que você escolher.")
 
 valor_atual = st.sidebar.number_input(
@@ -339,7 +339,7 @@ if pergunta:
 
     st.session_state.mensagens.append({"role": "assistant", "content": resposta})
 
-with st.expander("🧠 Como este RAG funciona"):
+with st.expander("Como este RAG funciona"):
     st.markdown(
         """
 **1. Retrieval.** As fontes oficiais (IBGE e FGV IBRE) foram coletadas por `ingest.py`,
